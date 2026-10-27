@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Time Furniture | Nairobi</title>
+<meta name="description" content="Shop stylish, affordable furniture at Happy Time Furniture in Mathare, opposite Moi Air Base, Nairobi, Kenya.">
+<style>
+:root{--gold:#ffc400;--ink:#17191b;--muted:#62666b;--cream:#f7f5f0;--line:#e8e6e0}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:#fff}
+a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}
+.topbar{background:var(--ink);color:#fff;padding:10px 5%;font-size:13px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+header{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:17px 5%;border-bottom:1px solid var(--line);background:white}
+.logo{font-size:25px;font-weight:900;line-height:1.05}.logo span{display:block;color:#d89f00;font-size:15px;text-align:right}
+nav{display:flex;gap:24px;font-weight:700;font-size:14px}nav a:hover{color:#b48600}
+.hero{min-height:390px;padding:64px 5%;display:flex;align-items:center;color:white;background:linear-gradient(90deg,rgba(18,17,14,.88),rgba(18,17,14,.48),rgba(18,17,14,.05)),url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1800&q=85') center/cover}
+.hero-copy{max-width:570px}.eyebrow{color:var(--gold);font-weight:800;letter-spacing:.5px}.hero h1{font-size:clamp(36px,5vw,58px);line-height:1.04;margin:15px 0}.hero h1 span{color:var(--gold)}.hero p{font-size:17px;line-height:1.6;max-width:510px}
+.btn{display:inline-block;background:var(--gold);color:#17191b;border:0;border-radius:7px;padding:13px 20px;font-weight:800;margin-top:10px}.btn:hover{filter:brightness(.94)}
+.section{padding:40px 5%}.section-head{display:flex;justify-content:space-between;align-items:end;gap:15px;margin-bottom:20px}.section h2{font-size:28px;margin:0 0 8px}.section-head p{color:var(--muted);margin:0}
+.categories{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.category{background:var(--cream);padding:23px 12px;text-align:center;border-radius:10px;font-weight:800}.category span{display:block;font-size:28px;margin-bottom:9px}
+.products{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:17px}.product{border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#fff}.product img{width:100%;height:190px;object-fit:cover;display:block;background:var(--cream)}.product-info{padding:14px}.product h3{font-size:16px;margin:0 0 8px}.price{font-weight:900;font-size:17px;margin:0 0 12px}.small-btn{width:100%;border:0;background:var(--gold);padding:11px;border-radius:5px;font-weight:800}.small-btn:hover{filter:brightness(.94)}
+.about{background:var(--cream);display:grid;grid-template-columns:1.1fr 1fr;gap:35px;align-items:center}.about p{line-height:1.7;color:#4d5054}.about-card{background:#fff;padding:25px;border-radius:12px;border:1px solid var(--line)}.about-card strong{display:block;margin-bottom:8px}
+footer{background:var(--ink);color:white;padding:30px 5%;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:14px}.footer-gold{color:var(--gold)}
+.cart-float{position:fixed;right:18px;bottom:18px;background:var(--gold);border:0;border-radius:999px;padding:14px 18px;font-weight:900;box-shadow:0 4px 18px #0002;z-index:5}
+#cart-message{position:fixed;bottom:78px;right:18px;max-width:320px;background:#17191b;color:white;padding:14px 16px;border-radius:8px;display:none;z-index:5;box-shadow:0 4px 18px #0002}
+@media(max-width:800px){header{align-items:flex-start;flex-direction:column}nav{gap:15px;flex-wrap:wrap}.products{grid-template-columns:repeat(2,minmax(0,1fr))}.categories{grid-template-columns:repeat(2,1fr)}.about{grid-template-columns:1fr}.hero{padding-top:50px;padding-bottom:50px}}
+@media(max-width:440px){.products{grid-template-columns:1fr}.product img{height:220px}.topbar{font-size:12px}.section-head{align-items:flex-start;flex-direction:column}}
+</style>
+</head>
+<body>
+<div class="topbar"><span>📍 Happy Time Furniture · Mathare, opposite Moi Air Base, Nairobi</span><span>📞 Call / WhatsApp: <strong>0700 123 456</strong> · Delivery available</span></div>
+<header>
+  <a class="logo" href="#home">🛋️ Happy Time<span>FURNITURE</span></a>
+  <nav aria-label="Main navigation"><a href="#home">Home</a><a href="#shop">Shop</a><a href="#about">About Us</a><a href="#contact">Contact</a></nav>
+</header>
+<main>
+<section class="hero" id="home"><div class="hero-copy">
+  <div class="eyebrow">QUALITY FURNITURE · AFFORDABLE PRICES · HAPPY HOMES</div>
+  <h1>Make Your Home<br><span>More Comfortable</span></h1>
+  <p>Find furniture for your home or office at Happy Time Furniture. Visit us in Mathare, opposite Moi Air Base, Nairobi.</p>
+  <a class="btn" href="#shop">Shop Furniture →</a>
+</div></section>
+<section class="section" aria-labelledby="categories-title">
+  <div class="section-head"><div><h2 id="categories-title">Shop by Category</h2><p>Find the right furniture for your space.</p></div></div>
+  <div class="categories"><div class="category"><span>🛋️</span>Sofas & Chairs</div><div class="category"><span>🛏️</span>Beds</div><div class="category"><span>🍽️</span>Dining Sets</div><div class="category"><span>🗄️</span>Wardrobes & Storage</div></div>
+</section>
+<section class="section" id="shop">
+  <div class="section-head"><div><h2>Featured Furniture</h2><p>Sample products and prices — update these to match your stock.</p></div></div>
+  <div class="products">
+    <article class="product"><img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=700&q=80" alt="Modern sofa"><div class="product-info"><h3>Comfortable Sofa</h3><p class="price">KSh 45,000</p><button class="small-btn" data-product="Comfortable Sofa" data-price="45000">Add to Cart</button></div></article>
+    <article class="product"><img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=700&q=80" alt="Bedroom with bed"><div class="product-info"><h3>Double Bed</h3><p class="price">KSh 28,000</p><button class="small-btn" data-product="Double Bed" data-price="28000">Add to Cart</button></div></article>
+    <article class="product"><img src="https://images.unsplash.com/photo-1604578762246-41134e37f9cc?auto=format&fit=crop&w=700&q=80" alt="Dining furniture" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1604578762246-41134e37f9cc?auto=format&fit=crop&w=700&q=80'"><div class="product-info"><h3>Dining Set</h3><p class="price">KSh 18,000</p><button class="small-btn" data-product="Dining Set" data-price="18000">Add to Cart</button></div></article>
+    <article class="product"><img src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=700&q=80" alt="Wardrobe and bedroom storage"><div class="product-info"><h3>Wardrobe</h3><p class="price">KSh 18,000</p><button class="small-btn" data-product="Wardrobe" data-price="18000">Add to Cart</button></div></article>
+    <article class="product"><img src="https://images.unsplash.com/photo-1593784991095-a205069470b6?auto=format&fit=crop&w=700&q=80" alt="Television stand"><div class="product-info"><h3>TV Stand</h3><p class="price">KSh 12,000</p><button class="small-btn" data-product="TV Stand" data-price="12000">Add to Cart</button></div></article>
+    <article class="product"><img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=700&q=80" alt="Office desk and workspace"><div class="product-info"><h3>Office Desk</h3><p class="price">KSh 9,500</p><button class="small-btn" data-product="Office Desk" data-price="9500">Add to Cart</button></div></article>
+    <article class="product"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=700&q=80" alt="Coordinated living room furniture"><div class="product-info"><h3>Living Room Set</h3><p class="price">KSh 25,000</p><button class="small-btn" data-product="Living Room Set" data-price="25000">Add to Cart</button></div></article>
+    <article class="product"><img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=700&q=80" alt="Modern home interior"><div class="product-info"><h3>Home Furniture Set</h3><p class="price">Ask for price</p><button class="small-btn" data-product="Home Furniture Set" data-price="0">Enquire on WhatsApp</button></div></article>
+  </div>
+</section>
+<section class="section about" id="about"><div><h2>Furniture for Happy Homes</h2><p>Happy Time Furniture serves customers looking for practical, stylish furniture at affordable prices. Visit our shop in Mathare, opposite Moi Air Base, Nairobi, or contact us to ask about available designs and delivery.</p><a class="btn" href="#contact">Contact Us</a></div><div class="about-card"><strong>📍 Visit our shop</strong><p>Mathare, opposite Moi Air Base<br>Nairobi, Kenya</p><strong>🚚 Delivery</strong><p>Ask us about delivery availability and charges for your area.</p><strong>💬 Easy ordering</strong><p>Add products to your cart, then send your order enquiry through WhatsApp.</p></div></section>
+<section class="section" id="contact"><div class="section-head"><div><h2>Contact Happy Time Furniture</h2><p>Ask about prices, sizes, colours, stock, and delivery.</p></div></div><a class="btn" id="whatsapp-link" href="https://wa.me/254700123456?text=Hello%20Happy%20Time%20Furniture%2C%20I%20would%20like%20to%20enquire%20about%20your%20furniture." target="_blank" rel="noopener">Chat with us on WhatsApp →</a><p style="color:#62666b;font-size:13px;margin-top:12px">Note: The phone number shown is a placeholder. Replace it with your business number before publishing.</p></section>
+</main>
+<footer><span>© <span id="year"></span> <span class="footer-gold">Happy Time Furniture</span></span><span>Mathare, opposite Moi Air Base, Nairobi, Kenya</span><span>Quality · Value · Happy Homes</span></footer>
+<button class="cart-float" id="cart-button" type="button">🛒 Cart (<span id="cart-count">0</span>)</button>
+<div id="cart-message" role="status" aria-live="polite"></div>
+<script>
+(function(){
+ const cart=[];const count=document.getElementById('cart-count');const message=document.getElementById('cart-message');
+ document.getElementById('year').textContent=new Date().getFullYear();
+ function showMessage(text){message.textContent=text;message.style.display='block';}
+ document.querySelectorAll('[data-product]').forEach(button=>button.addEventListener('click',()=>{
+   const item={name:button.dataset.product,price:Number(button.dataset.price||0)};cart.push(item);count.textContent=cart.length;
+   showMessage(item.price ? item.name+' added to your cart.' : item.name+' added. Open the cart to enquire on WhatsApp.');
+ }));
+ document.getElementById('cart-button').addEventListener('click',()=>{
+   if(!cart.length){showMessage('Your cart is empty. Choose a product to get started.');return;}
+   const total=cart.reduce((sum,item)=>sum+item.price,0);
+   const lines=cart.map(item=>'- '+item.name+(item.price?' — KSh '+item.price.toLocaleString('en-KE'):' — price enquiry')).join('\n');
+   const text='Hello Happy Time Furniture, I would like to enquire/order:\n'+lines+'\nEstimated total for priced items: KSh '+total.toLocaleString('en-KE')+'\nPlease confirm availability and delivery.';
+   showMessage('Your cart has '+cart.length+' item(s). Opening WhatsApp to send your enquiry…');
+   window.open('https://wa.me/254700123456?text='+encodeURIComponent(text),'_blank','noopener');
+ });
+})();
+</script>
+</body>
+</html>
