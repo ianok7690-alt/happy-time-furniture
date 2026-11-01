@@ -1,86 +1,554 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Time Furniture | Nairobi</title>
-<meta name="description" content="Shop stylish, affordable furniture at Happy Time Furniture in Mathare, opposite Moi Air Base, Nairobi, Kenya.">
-<style>
-:root{--gold:#ffc400;--ink:#17191b;--muted:#62666b;--cream:#f7f5f0;--line:#e8e6e0}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:#fff}
-a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}
-.topbar{background:var(--ink);color:#fff;padding:10px 5%;font-size:13px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
-header{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:17px 5%;border-bottom:1px solid var(--line);background:white}
-.logo{font-size:25px;font-weight:900;line-height:1.05}.logo span{display:block;color:#d89f00;font-size:15px;text-align:right}
-nav{display:flex;gap:24px;font-weight:700;font-size:14px}nav a:hover{color:#b48600}
-.hero{min-height:390px;padding:64px 5%;display:flex;align-items:center;color:white;background:linear-gradient(90deg,rgba(18,17,14,.88),rgba(18,17,14,.48),rgba(18,17,14,.05)),url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1800&q=85') center/cover}
-.hero-copy{max-width:570px}.eyebrow{color:var(--gold);font-weight:800;letter-spacing:.5px}.hero h1{font-size:clamp(36px,5vw,58px);line-height:1.04;margin:15px 0}.hero h1 span{color:var(--gold)}.hero p{font-size:17px;line-height:1.6;max-width:510px}
-.btn{display:inline-block;background:var(--gold);color:#17191b;border:0;border-radius:7px;padding:13px 20px;font-weight:800;margin-top:10px}.btn:hover{filter:brightness(.94)}
-.section{padding:40px 5%}.section-head{display:flex;justify-content:space-between;align-items:end;gap:15px;margin-bottom:20px}.section h2{font-size:28px;margin:0 0 8px}.section-head p{color:var(--muted);margin:0}
-.categories{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.category{background:var(--cream);padding:23px 12px;text-align:center;border-radius:10px;font-weight:800}.category span{display:block;font-size:28px;margin-bottom:9px}
-.products{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:17px}.product{border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#fff}.product img{width:100%;height:190px;object-fit:cover;display:block;background:var(--cream)}.product-info{padding:14px}.product h3{font-size:16px;margin:0 0 8px}.price{font-weight:900;font-size:17px;margin:0 0 12px}.small-btn{width:100%;border:0;background:var(--gold);padding:11px;border-radius:5px;font-weight:800}.small-btn:hover{filter:brightness(.94)}
-.about{background:var(--cream);display:grid;grid-template-columns:1.1fr 1fr;gap:35px;align-items:center}.about p{line-height:1.7;color:#4d5054}.about-card{background:#fff;padding:25px;border-radius:12px;border:1px solid var(--line)}.about-card strong{display:block;margin-bottom:8px}
-footer{background:var(--ink);color:white;padding:30px 5%;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:14px}.footer-gold{color:var(--gold)}
-.cart-float{position:fixed;right:18px;bottom:18px;background:var(--gold);border:0;border-radius:999px;padding:14px 18px;font-weight:900;box-shadow:0 4px 18px #0002;z-index:5}
-#cart-message{position:fixed;bottom:78px;right:18px;max-width:320px;background:#17191b;color:white;padding:14px 16px;border-radius:8px;display:none;z-index:5;box-shadow:0 4px 18px #0002}
-@media(max-width:800px){header{align-items:flex-start;flex-direction:column}nav{gap:15px;flex-wrap:wrap}.products{grid-template-columns:repeat(2,minmax(0,1fr))}.categories{grid-template-columns:repeat(2,1fr)}.about{grid-template-columns:1fr}.hero{padding-top:50px;padding-bottom:50px}}
-@media(max-width:440px){.products{grid-template-columns:1fr}.product img{height:220px}.topbar{font-size:12px}.section-head{align-items:flex-start;flex-direction:column}}
-</style>
-</head>
-<body>
-<div class="topbar"><span>📍 Happy Time Furniture · Mathare, opposite Moi Air Base, Nairobi</span><span>📞 Call / WhatsApp: <strong>0700 123 456</strong> · Delivery available</span></div>
-<header>
-  <a class="logo" href="#home">🛋️ Happy Time<span>FURNITURE</span></a>
-  <nav aria-label="Main navigation"><a href="#home">Home</a><a href="#shop">Shop</a><a href="#about">About Us</a><a href="#contact">Contact</a></nav>
-</header>
-<main>
-<section class="hero" id="home"><div class="hero-copy">
-  <div class="eyebrow">QUALITY FURNITURE · AFFORDABLE PRICES · HAPPY HOMES</div>
-  <h1>Make Your Home<br><span>More Comfortable</span></h1>
-  <p>Find furniture for your home or office at Happy Time Furniture. Visit us in Mathare, opposite Moi Air Base, Nairobi.</p>
-  <a class="btn" href="#shop">Shop Furniture →</a>
-</div></section>
-<section class="section" aria-labelledby="categories-title">
-  <div class="section-head"><div><h2 id="categories-title">Shop by Category</h2><p>Find the right furniture for your space.</p></div></div>
-  <div class="categories"><div class="category"><span>🛋️</span>Sofas & Chairs</div><div class="category"><span>🛏️</span>Beds</div><div class="category"><span>🍽️</span>Dining Sets</div><div class="category"><span>🗄️</span>Wardrobes & Storage</div></div>
-</section>
-<section class="section" id="shop">
-  <div class="section-head"><div><h2>Featured Furniture</h2><p>Sample products and prices — update these to match your stock.</p></div></div>
-  <div class="products">
-    <article class="product"><img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=700&q=80" alt="Modern sofa"><div class="product-info"><h3>Comfortable Sofa</h3><p class="price">KSh 45,000</p><button class="small-btn" data-product="Comfortable Sofa" data-price="45000">Add to Cart</button></div></article>
-    <article class="product"><img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=700&q=80" alt="Bedroom with bed"><div class="product-info"><h3>Double Bed</h3><p class="price">KSh 28,000</p><button class="small-btn" data-product="Double Bed" data-price="28000">Add to Cart</button></div></article>
-    <article class="product"><img src="https://images.unsplash.com/photo-1604578762246-41134e37f9cc?auto=format&fit=crop&w=700&q=80" alt="Dining furniture" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1604578762246-41134e37f9cc?auto=format&fit=crop&w=700&q=80'"><div class="product-info"><h3>Dining Set</h3><p class="price">KSh 18,000</p><button class="small-btn" data-product="Dining Set" data-price="18000">Add to Cart</button></div></article>
-    <article class="product"><img src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=700&q=80" alt="Wardrobe and bedroom storage"><div class="product-info"><h3>Wardrobe</h3><p class="price">KSh 18,000</p><button class="small-btn" data-product="Wardrobe" data-price="18000">Add to Cart</button></div></article>
-    <article class="product"><img src="https://images.unsplash.com/photo-1593784991095-a205069470b6?auto=format&fit=crop&w=700&q=80" alt="Television stand"><div class="product-info"><h3>TV Stand</h3><p class="price">KSh 12,000</p><button class="small-btn" data-product="TV Stand" data-price="12000">Add to Cart</button></div></article>
-    <article class="product"><img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=700&q=80" alt="Office desk and workspace"><div class="product-info"><h3>Office Desk</h3><p class="price">KSh 9,500</p><button class="small-btn" data-product="Office Desk" data-price="9500">Add to Cart</button></div></article>
-    <article class="product"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=700&q=80" alt="Coordinated living room furniture"><div class="product-info"><h3>Living Room Set</h3><p class="price">KSh 25,000</p><button class="small-btn" data-product="Living Room Set" data-price="25000">Add to Cart</button></div></article>
-    <article class="product"><img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=700&q=80" alt="Modern home interior"><div class="product-info"><h3>Home Furniture Set</h3><p class="price">Ask for price</p><button class="small-btn" data-product="Home Furniture Set" data-price="0">Enquire on WhatsApp</button></div></article>
-  </div>
-</section>
-<section class="section about" id="about"><div><h2>Furniture for Happy Homes</h2><p>Happy Time Furniture serves customers looking for practical, stylish furniture at affordable prices. Visit our shop in Mathare, opposite Moi Air Base, Nairobi, or contact us to ask about available designs and delivery.</p><a class="btn" href="#contact">Contact Us</a></div><div class="about-card"><strong>📍 Visit our shop</strong><p>Mathare, opposite Moi Air Base<br>Nairobi, Kenya</p><strong>🚚 Delivery</strong><p>Ask us about delivery availability and charges for your area.</p><strong>💬 Easy ordering</strong><p>Add products to your cart, then send your order enquiry through WhatsApp.</p></div></section>
-<section class="section" id="contact"><div class="section-head"><div><h2>Contact Happy Time Furniture</h2><p>Ask about prices, sizes, colours, stock, and delivery.</p></div></div><a class="btn" id="whatsapp-link" href="https://wa.me/254700123456?text=Hello%20Happy%20Time%20Furniture%2C%20I%20would%20like%20to%20enquire%20about%20your%20furniture." target="_blank" rel="noopener">Chat with us on WhatsApp →</a><p style="color:#62666b;font-size:13px;margin-top:12px">Note: The phone number shown is a placeholder. Replace it with your business number before publishing.</p></section>
-</main>
-<footer><span>© <span id="year"></span> <span class="footer-gold">Happy Time Furniture</span></span><span>Mathare, opposite Moi Air Base, Nairobi, Kenya</span><span>Quality · Value · Happy Homes</span></footer>
-<button class="cart-float" id="cart-button" type="button">🛒 Cart (<span id="cart-count">0</span>)</button>
-<div id="cart-message" role="status" aria-live="polite"></div>
-<script>
-(function(){
- const cart=[];const count=document.getElementById('cart-count');const message=document.getElementById('cart-message');
- document.getElementById('year').textContent=new Date().getFullYear();
- function showMessage(text){message.textContent=text;message.style.display='block';}
- document.querySelectorAll('[data-product]').forEach(button=>button.addEventListener('click',()=>{
-   const item={name:button.dataset.product,price:Number(button.dataset.price||0)};cart.push(item);count.textContent=cart.length;
-   showMessage(item.price ? item.name+' added to your cart.' : item.name+' added. Open the cart to enquire on WhatsApp.');
- }));
- document.getElementById('cart-button').addEventListener('click',()=>{
-   if(!cart.length){showMessage('Your cart is empty. Choose a product to get started.');return;}
-   const total=cart.reduce((sum,item)=>sum+item.price,0);
-   const lines=cart.map(item=>'- '+item.name+(item.price?' — KSh '+item.price.toLocaleString('en-KE'):' — price enquiry')).join('\n');
-   const text='Hello Happy Time Furniture, I would like to enquire/order:\n'+lines+'\nEstimated total for priced items: KSh '+total.toLocaleString('en-KE')+'\nPlease confirm availability and delivery.';
-   showMessage('Your cart has '+cart.length+' item(s). Opening WhatsApp to send your enquiry…');
-   window.open('https://wa.me/254700123456?text='+encodeURIComponent(text),'_blank','noopener');
- });
-})();
-</script>
-</body>
-</html>
+
+const SUPABASE_URL = "https://xzzprmezmjknlxsjbyxw.supabase.co";
+const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_rGCe4SYeeEssLKkxuTsVVA_IB3nFL9N";
+const WHATSAPP_NUMBER = "254116990560";
+const BUSINESS_PHONE = "";
+const STORAGE_BUCKET = "product-images";
+
+const db = supabase.createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY);
+
+let products = [];
+let cart = [];
+let activeCategory = "All";
+let currentUser = null;
+
+const grid = document.getElementById("productGrid");
+const searchInput = document.getElementById("searchInput");
+
+const money = amount =>
+  new Intl.NumberFormat("en-KE", {
+    style: "currency",
+    currency: "KES",
+    maximumFractionDigits: 0
+  }).format(Number(amount) || 0);
+
+function escapeHtml(value) {
+  return String(value ?? "").replace(/[&<>"']/g, char => ({
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': "&quot;",
+    "'": "&#39;"
+  })[char]);
+}
+
+function showMessage(message, isError = false) {
+  const element = document.getElementById("formMessage");
+  if (!element) return;
+  element.textContent = message;
+  element.style.color = isError ? "#b42318" : "#354b39";
+}
+
+// LOAD PRODUCTS
+async function loadProducts() {
+  if (!grid) return;
+
+  grid.innerHTML = '<p class="empty-state">Loading furniture...</p>';
+
+  const { data, error } = await db
+    .from("products")
+    .select("*")
+    .order("created_at", { ascending: false });
+
+  if (error) {
+    console.error(error);
+    grid.innerHTML = '<p class="empty-state">Unable to load furniture.</p>';
+    return;
+  }
+
+  products = data || [];
+  renderProducts();
+  renderManagedProducts();
+}
+
+// DISPLAY PRODUCTS
+function renderProducts() {
+  if (!grid) return;
+
+  const query = searchInput ? searchInput.value.trim().toLowerCase() : "";
+
+  const visible = products.filter(product => {
+    const categoryMatch =
+      activeCategory === "All" || product.category === activeCategory;
+
+    const searchMatch =
+      String(product.name || "").toLowerCase().includes(query) ||
+      String(product.category || "").toLowerCase().includes(query);
+
+    return categoryMatch && searchMatch;
+  });
+
+  if (!visible.length) {
+    grid.innerHTML = '<p class="empty-state">No furniture found.</p>';
+    return;
+  }
+
+  grid.innerHTML = visible.map(product => `
+    <article class="product-card">
+      <div class="product-image">
+        ${product.image_url
+          ? `<img src="${escapeHtml(product.image_url)}"
+              alt="${escapeHtml(product.name)}"
+              loading="lazy"
+              onerror="this.style.display='none';">`
+          : '<p>No picture available</p>'}
+      </div>
+      <div class="product-info">
+        <span class="product-category">
+          ${escapeHtml(product.category || "Furniture")}
+        </span>
+        <h3>${escapeHtml(product.name)}</h3>
+        <div class="product-bottom">
+          <span class="price">${money(product.price)}</span>
+          <button class="add-btn"
+            data-id="${escapeHtml(product.id)}"
+            aria-label="Enquire about ${escapeHtml(product.name)}">+</button>
+        </div>
+      </div>
+    </article>
+  `).join("");
+
+  grid.querySelectorAll(".add-btn").forEach(button => {
+    button.addEventListener("click", () => addToCart(button.dataset.id));
+  });
+}
+
+// CUSTOMER ENQUIRIES
+function addToCart(id) {
+  const product = products.find(item => String(item.id) === String(id));
+  if (!product) return;
+
+  cart.push(product);
+
+  const count = document.getElementById("cartCount");
+  if (count) count.textContent = cart.length;
+
+  const toast = document.getElementById("toast");
+  if (toast) {
+    toast.textContent = product.name + " added to your enquiry list.";
+    toast.classList.add("show");
+    setTimeout(() => toast.classList.remove("show"), 2200);
+  }
+}
+
+// CATEGORY FILTERS
+document.querySelectorAll(".filter").forEach(button => {
+  button.addEventListener("click", () => {
+    document.querySelectorAll(".filter").forEach(item =>
+      item.classList.remove("active")
+    );
+
+    button.classList.add("active");
+    activeCategory = button.dataset.category;
+    renderProducts();
+  });
+});
+
+// SEARCH
+if (searchInput) {
+  searchInput.addEventListener("input", renderProducts);
+}
+
+// PRODUCT MANAGER
+const managerPanel = document.getElementById("managerPanel");
+const toggleManager = document.getElementById("toggleManager");
+
+if (managerPanel) {
+  managerPanel.insertAdjacentHTML("afterbegin", `
+    <div class="admin-login" id="adminLogin">
+      <h3>Administrator Login</h3>
+      <p>Log in to manage Happy Time Furniture products.</p>
+      <form id="adminLoginForm">
+        <input type="email" id="adminEmail"
+          placeholder="Administrator email" required>
+        <input type="password" id="adminPassword"
+          placeholder="Administrator password" required>
+        <button class="button primary" type="submit">
+          Login to manage products
+        </button>
+      </form>
+      <p id="loginMessage" role="status"></p>
+    </div>
+    <div id="adminDashboard" hidden>
+      <div class="admin-status">
+        <span>Administrator is logged in.</span>
+        <button class="button secondary" type="button" id="adminLogout">
+          Logout
+        </button>
+      </div>
+    </div>
+  `);
+}
+
+function updateAdminView() {
+  const login = document.getElementById("adminLogin");
+  const dashboard = document.getElementById("adminDashboard");
+  const form = document.getElementById("productForm");
+
+  if (!login || !dashboard) return;
+
+  login.hidden = !!currentUser;
+  dashboard.hidden = !currentUser;
+
+  if (form) form.hidden = !currentUser;
+
+  const warning = document.querySelector(".manager-warning");
+  if (warning) {
+    warning.textContent = currentUser
+      ? "You are logged in. Products and pictures are saved online."
+      : "Please log in with your administrator account.";
+  }
+
+  renderManagedProducts();
+}
+
+// ADMIN LOGIN
+const loginForm = document.getElementById("adminLoginForm");
+
+if (loginForm) {
+  loginForm.addEventListener("submit", async event => {
+    event.preventDefault();
+
+    const email = document.getElementById("adminEmail").value.trim();
+    const password = document.getElementById("adminPassword").value;
+    const message = document.getElementById("loginMessage");
+
+    message.textContent = "Logging in...";
+
+    const { data, error } = await db.auth.signInWithPassword({
+      email,
+      password
+    });
+
+    if (error) {
+      message.textContent = "Login failed. Check your email and password.";
+      console.error(error);
+      return;
+    }
+
+    currentUser = data.user;
+    message.textContent = "Login successful.";
+    updateAdminView();
+    await loadProducts();
+  });
+}
+
+// ADMIN LOGOUT
+document.addEventListener("click", async event => {
+  if (event.target.id !== "adminLogout") return;
+
+  const { error } = await db.auth.signOut();
+
+  if (error) {
+    alert("Could not log out. Please try again.");
+    return;
+  }
+
+  currentUser = null;
+  updateAdminView();
+  await loadProducts();
+});
+
+// CHECK LOGIN SESSION
+async function checkAdminSession() {
+  const { data, error } = await db.auth.getSession();
+
+  if (error) {
+    console.error(error);
+    return;
+  }
+
+  currentUser = data.session?.user || null;
+  updateAdminView();
+}
+
+db.auth.onAuthStateChange((_event, session) => {
+  currentUser = session?.user || null;
+  updateAdminView();
+});
+
+// IMAGE PREVIEW
+const imageInput = document.getElementById("productImage");
+const imagePreview = document.getElementById("imagePreview");
+
+if (imageInput && imagePreview) {
+  imageInput.addEventListener("change", () => {
+    const file = imageInput.files[0];
+
+    if (!file) {
+      imagePreview.hidden = true;
+      return;
+    }
+
+    if (!file.type.startsWith("image/")) {
+      showMessage("Please select an image file.", true);
+      imageInput.value = "";
+      return;
+    }
+
+    if (file.size > 5 * 1024 * 1024) {
+      showMessage("Choose an image smaller than 5 MB.", true);
+      imageInput.value = "";
+      return;
+    }
+
+    imagePreview.src = URL.createObjectURL(file);
+    imagePreview.hidden = false;
+  });
+}
+
+// ADD PRODUCT AND UPLOAD PICTURE
+const productForm = document.getElementById("productForm");
+
+if (productForm) {
+  productForm.addEventListener("submit", async event => {
+    event.preventDefault();
+
+    if (!currentUser) {
+      showMessage("Please log in first.", true);
+      return;
+    }
+
+    const name = document.getElementById("productName").value.trim();
+    const price = Number(document.getElementById("productPrice").value);
+    const category = document.getElementById("productCategory").value;
+    const file = imageInput.files[0];
+
+    if (!name || !Number.isFinite(price) || price <= 0 || !file) {
+      showMessage("Complete all fields and select a picture.", true);
+      return;
+    }
+
+    if (!file.type.startsWith("image/") || file.size > 5 * 1024 * 1024) {
+      showMessage("Choose a valid image smaller than 5 MB.", true);
+      return;
+    }
+
+    const button = document.getElementById("saveProductBtn");
+    button.disabled = true;
+    button.textContent = "Uploading picture...";
+
+    let imagePath = null;
+
+    try {
+      const extension = file.name.split(".").pop().toLowerCase();
+
+      imagePath = `${currentUser.id}/${crypto.randomUUID()}.${extension}`;
+
+      const { error: uploadError } = await db.storage
+        .from(STORAGE_BUCKET)
+        .upload(imagePath, file, {
+          cacheControl: "3600",
+          upsert: false,
+          contentType: file.type
+        });
+
+      if (uploadError) throw uploadError;
+
+      const { data: imageData } = db.storage
+        .from(STORAGE_BUCKET)
+        .getPublicUrl(imagePath);
+
+      const { error: insertError } = await db
+        .from("products")
+        .insert({
+          name,
+          price,
+          category,
+          description: "",
+          image_url: imageData.publicUrl,
+          image_path: imagePath
+        });
+
+      if (insertError) throw insertError;
+
+      showMessage("Product and picture saved successfully!");
+      productForm.reset();
+      imagePreview.hidden = true;
+      await loadProducts();
+
+    } catch (error) {
+      console.error(error);
+
+      if (imagePath) {
+        await db.storage.from(STORAGE_BUCKET).remove([imagePath]);
+      }
+
+      showMessage(error.message || "Could not save product.", true);
+
+    } finally {
+      button.disabled = false;
+      button.textContent = "Add product";
+    }
+  });
+}
+
+// SHOW MANAGED PRODUCTS
+function renderManagedProducts() {
+  const container = document.getElementById("managedProductsList");
+  if (!container) return;
+
+  if (!currentUser) {
+    container.innerHTML = "<p>Log in to manage your products.</p>";
+    return;
+  }
+
+  if (!products.length) {
+    container.innerHTML = "<p>No products have been added yet.</p>";
+    return;
+  }
+
+  container.innerHTML = products.map(product => `
+    <div class="managed-row">
+      <img src="${escapeHtml(product.image_url || "")}"
+        alt="${escapeHtml(product.name)}">
+      <div class="managed-row-info">
+        <strong>${escapeHtml(product.name)}</strong>
+        <span>${money(product.price)} · ${escapeHtml(product.category)}</span>
+      </div>
+      <button class="remove-managed"
+        data-delete="${escapeHtml(product.id)}" type="button">
+        Delete
+      </button>
+    </div>
+  `).join("");
+}
+
+// DELETE PRODUCT AND PICTURE
+document.addEventListener("click", async event => {
+  const button = event.target.closest("[data-delete]");
+  if (!button) return;
+
+  if (!currentUser) {
+    alert("Please log in first.");
+    return;
+  }
+
+  const id = button.dataset.delete;
+  const product = products.find(item => String(item.id) === String(id));
+
+  if (!product) return;
+
+  if (!confirm(`Are you sure you want to delete ${product.name}?`)) {
+    return;
+  }
+
+  button.disabled = true;
+  button.textContent = "Deleting...";
+
+  try {
+    const { error } = await db
+      .from("products")
+      .delete()
+      .eq("id", id);
+
+    if (error) throw error;
+
+    if (product.image_path) {
+      const { error: imageError } = await db.storage
+        .from(STORAGE_BUCKET)
+        .remove([product.image_path]);
+
+      if (imageError) console.error(imageError);
+    }
+
+    await loadProducts();
+    showMessage("Product deleted successfully.");
+
+  } catch (error) {
+    console.error(error);
+    alert("Could not delete product. Please try again.");
+    button.disabled = false;
+    button.textContent = "Delete";
+  }
+});
+
+// EXPORT PRODUCT BACKUP
+const exportButton = document.getElementById("exportProducts");
+
+if (exportButton) {
+  exportButton.addEventListener("click", () => {
+    if (!currentUser) {
+      alert("Please log in first.");
+      return;
+    }
+
+    const file = new Blob(
+      [JSON.stringify(products, null, 2)],
+      { type: "application/json" }
+    );
+
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(file);
+    link.download = "happy-time-furniture-backup.json";
+    link.click();
+
+    URL.revokeObjectURL(link.href);
+  });
+}
+
+// OPEN/CLOSE MANAGER
+if (toggleManager && managerPanel) {
+  toggleManager.addEventListener("click", () => {
+    managerPanel.hidden = !managerPanel.hidden;
+
+    toggleManager.textContent = managerPanel.hidden
+      ? "Open product manager"
+      : "Close product manager";
+  });
+}
+
+// MOBILE MENU
+const menuToggle = document.getElementById("menuToggle");
+const nav = document.getElementById("nav");
+
+if (menuToggle && nav) {
+  menuToggle.addEventListener("click", () => {
+    const open = nav.classList.toggle("open");
+    menuToggle.setAttribute("aria-expanded", String(open));
+  });
+
+  document.querySelectorAll("#nav a").forEach(link => {
+    link.addEventListener("click", () => {
+      nav.classList.remove("open");
+      menuToggle.setAttribute("aria-expanded", "false");
+    });
+  });
+}
+
+// WHATSAPP
+const whatsappLink = document.getElementById("whatsappLink");
+
+if (whatsappLink) {
+  whatsappLink.href =
+    "https://wa.me/" + WHATSAPP_NUMBER +
+    "?text=" +
+    encodeURIComponent(
+      "Hello Happy Time Furniture, I would like to enquire about your furniture."
+    );
+}
+
+// BUSINESS PHONE
+const phoneDisplay = document.getElementById("phoneDisplay");
+
+if (phoneDisplay) {
+  phoneDisplay.textContent =
+    BUSINESS_PHONE || "Contact Happy Time Furniture";
+}
+
+// FOOTER YEAR
+const year = document.getElementById("year");
+
+if (year) {
+  year.textContent = new Date().getFullYear();
+}
+
+// START WEBSITE
+async function startWebsite() {
+  await checkAdminSession();
+  await loadProducts();
+}
+
+startWebsite();
+
+setInterval(loadProducts, 60000);
