@@ -87,3 +87,32 @@
     flex-direction: column;
   }
 }
+
+/* Product manager layout */
+.manager-section { padding-top: 20px; padding-bottom: 70px; }
+.manager-warning { color: var(--muted); font-size: 12px; line-height: 1.7; }
+#managerPanel { margin-top: 18px; padding: 24px; background: var(--cream); border: 1px solid var(--line); }
+#productForm { display: grid; gap: 12px; max-width: 650px; }
+#productForm label { display: grid; gap: 6px; font-size: 12px; font-weight: 600; }
+#productForm input, #productForm select, #productForm textarea {
+  width: 100%; padding: 11px; border: 1px solid var(--line);
+  border-radius: 4px; background: white; font: inherit; font-size: 12px;
+}
+#productForm button, #exportProducts {
+  width: fit-content; border: 0; cursor: pointer;
+}
+#imagePreview { display: block; max-width: 180px; max-height: 150px; object-fit: contain; }
+.managed-row {
+  display: flex; align-items: center; gap: 14px; padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+}
+.managed-row img { width: 65px; height: 58px; object-fit: cover; background: white; }
+.managed-row-info { display: flex; flex: 1; flex-direction: column; gap: 4px; min-width: 0; }
+.managed-row-info strong { font-size: 12px; }
+.managed-row-info span { color: var(--muted); font-size: 11px; }
+.remove-managed { border: 1px solid #e2caca; background: white; color: #9b3939; padding: 8px 11px; cursor: pointer; }
+@media(max-width:650px) {
+  #managerPanel { padding: 15px; }
+  .managed-row { align-items: flex-start; flex-wrap: wrap; }
+}
+
