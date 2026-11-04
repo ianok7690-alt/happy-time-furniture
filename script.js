@@ -173,58 +173,7 @@ function openProductDetails(id) {
       popup.style.display = "none";
     });
 }
-// PRODUCT DETAILS POPUP
-function openProductDetails(id) {
-const product = products.find(item => String(item.id) === String(id));
-if (!product) return;
 
-let popup = document.getElementById("productPopup");
-
-if (!popup) {
-popup = document.createElement("div");
-popup.id = "productPopup";
-popup.className = "product-popup";
-document.body.appendChild(popup);
-}
-
-const message =
-"Hello Happy Time Furniture! I would like to order:\n\n" +
-"Product: " + product.name + "\n" +
-"Price: " + money(product.price) + "\n" +
-"Picture: " + product.image_url;
-
-const whatsappUrl =
-"https://wa.me/" + WHATSAPP_NUMBER +
-"?text=" + encodeURIComponent(message);
-
-popup.innerHTML = ` <div class="product-popup-content"> <button class="popup-close" id="closeProductPopup">×</button>
-
-```
-  <img src="${escapeHtml(product.image_url)}"
-       alt="${escapeHtml(product.name)}">
-
-  <h2>${escapeHtml(product.name)}</h2>
-
-  <p>${money(product.price)}</p>
-
-  <a class="button primary"
-     href="${whatsappUrl}"
-     target="_blank"
-     rel="noopener">
-    ORDER ON WHATSAPP
-  </a>
-</div>
-```
-
-`;
-
-popup.style.display = "flex";
-
-document.getElementById("closeProductPopup")
-.addEventListener("click", () => {
-popup.style.display = "none";
-});
-}
 
 // CUSTOMER ENQUIRIES
 function addToCart(id) {
