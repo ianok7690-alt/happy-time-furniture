@@ -62,51 +62,22 @@ async function loadProducts() {
 }
 
 // DISPLAY PRODUCTS
+// DISPLAY PRODUCTS
 function renderProducts() {
-if (!grid) return;
+  if (!grid) return;
 
-const query = searchInput ? searchInput.value.trim().toLowerCase() : "";
+  const query = searchInput ? searchInput.value.trim().toLowerCase() : "";
 
-const visible = products.filter(product => {
-const categoryMatch =
-activeCategory === "All" || product.category === activeCategory;
+  const visible = products.filter(product => {
+    const categoryMatch =
+      activeCategory === "All" || product.category === activeCategory;
 
-const searchMatch =
-  String(product.name || "").toLowerCase().includes(query) ||
-  String(product.category || "").toLowerCase().includes(query);
+    const searchMatch =
+      String(product.name || "").toLowerCase().includes(query) ||
+      String(product.category || "").toLowerCase().includes(query);
 
-return categoryMatch && searchMatch;
-```
-
-});
-
-if (!visible.length) {
-grid.innerHTML = '<p class="empty-state">No furniture found.</p>';
-return;
-}
-
-grid.innerHTML = visible.map(product => `    <article class="product-card">       <div class="product-image">
-        ${product.image_url
-          ?`<img class="clickable-product-image"
-           src="${escapeHtml(product.image_url)}"
-           alt="${escapeHtml(product.name)}"
-           data-product-id="${escapeHtml(product.id)}"
-           loading="lazy">`           : '<p>No picture available</p>'}       </div>       <div class="product-info">         <span class="product-category">
-          ${escapeHtml(product.category || "Furniture")}         </span>         <h3>${escapeHtml(product.name)}</h3>         <div class="product-bottom">           <span class="price">${money(product.price)}</span>           <button class="add-btn"
-            data-id="${escapeHtml(product.id)}">+</button>         </div>       </div>     </article>
-  `).join("");
-
-grid.querySelectorAll(".add-btn").forEach(button => {
-button.addEventListener("click", () => addToCart(button.dataset.id));
-});
-
-grid.querySelectorAll(".clickable-product-image").forEach(image => {
-image.addEventListener("click", () => {
-openProductDetails(image.dataset.productId);
-});
-});
-}
-
+    return categoryMatch && searchMatch;
+  });
 
   if (!visible.length) {
     grid.innerHTML = '<p class="empty-state">No furniture found.</p>';
@@ -118,23 +89,23 @@ openProductDetails(image.dataset.productId);
       <div class="product-image">
         ${product.image_url
           ? `<img class="clickable-product-image"
-              data-product-id="${escapeHtml(product.id)}"
               src="${escapeHtml(product.image_url)}"
               alt="${escapeHtml(product.name)}"
-              loading="lazy"
-              onerror="this.style.display='none';">`
+              data-product-id="${escapeHtml(product.id)}"
+              loading="lazy">`
           : '<p>No picture available</p>'}
       </div>
+
       <div class="product-info">
         <span class="product-category">
           ${escapeHtml(product.category || "Furniture")}
         </span>
         <h3>${escapeHtml(product.name)}</h3>
+
         <div class="product-bottom">
           <span class="price">${money(product.price)}</span>
           <button class="add-btn"
-            data-id="${escapeHtml(product.id)}"
-            aria-label="Enquire about ${escapeHtml(product.name)}">+</button>
+            data-id="${escapeHtml(product.id)}">+</button>
         </div>
       </div>
     </article>
@@ -142,11 +113,65 @@ openProductDetails(image.dataset.productId);
 
   grid.querySelectorAll(".add-btn").forEach(button => {
     button.addEventListener("click", () => addToCart(button.dataset.id));
-  });  grid.querySelectorAll(".clickable-product-image").forEach(image => {
+  });
+
+  grid.querySelectorAll(".clickable-product-image").forEach(image => {
     image.addEventListener("click", () => {
       openProductDetails(image.dataset.productId);
     });
   });
+}
+
+// PRODUCT DETAILS POPUP
+function openProductDetails(id) {
+  const product = products.find(item => String(item.id) === String(id));
+  if (!product) return;
+
+  let popup = document.getElementById("productPopup");
+
+  if (!popup) {
+    popup = document.createElement("div");
+    popup.id = "productPopup";
+    popup.className = "product-popup";
+    document.body.appendChild(popup);
+  }
+
+  const message =
+    "Hello Happy Time Furniture! I would like to order:\n\n" +
+    "Product: " + product.name + "\n" +
+    "Price: " + money(product.price) + "\n" +
+    "Picture: " + product.image_url;
+
+  const whatsappUrl =
+    "https://wa.me/" + WHATSAPP_NUMBER +
+    "?text=" + encodeURIComponent(message);
+
+  popup.innerHTML = `
+    <div class="product-popup-content">
+      <button class="popup-close" id="closeProductPopup">×</button>
+
+      <img src="${escapeHtml(product.image_url)}"
+           alt="${escapeHtml(product.name)}">
+
+      <h2>${escapeHtml(product.name)}</h2>
+
+      <p>${money(product.price)}</p>
+
+      <a class="button primary"
+         href="${whatsappUrl}"
+         target="_blank"
+         rel="noopener">
+        ORDER ON WHATSAPP
+      </a>
+    </div>
+  `;
+
+  popup.style.display = "flex";
+
+  document.getElementById("closeProductPopup")
+    .addEventListener("click", () => {
+      popup.style.display = "none";
+    });
 }
 // PRODUCT DETAILS POPUP
 function openProductDetails(id) {
