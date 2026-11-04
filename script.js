@@ -71,7 +71,6 @@ const visible = products.filter(product => {
 const categoryMatch =
 activeCategory === "All" || product.category === activeCategory;
 
-```
 const searchMatch =
   String(product.name || "").toLowerCase().includes(query) ||
   String(product.category || "").toLowerCase().includes(query);
@@ -118,7 +117,9 @@ openProductDetails(image.dataset.productId);
     <article class="product-card">
       <div class="product-image">
         ${product.image_url
-          ? `<img src="${escapeHtml(product.image_url)}"
+          ? `<img class="clickable-product-image"
+              data-product-id="${escapeHtml(product.id)}"
+              src="${escapeHtml(product.image_url)}"
               alt="${escapeHtml(product.name)}"
               loading="lazy"
               onerror="this.style.display='none';">`
@@ -141,6 +142,10 @@ openProductDetails(image.dataset.productId);
 
   grid.querySelectorAll(".add-btn").forEach(button => {
     button.addEventListener("click", () => addToCart(button.dataset.id));
+  });  grid.querySelectorAll(".clickable-product-image").forEach(image => {
+    image.addEventListener("click", () => {
+      openProductDetails(image.dataset.productId);
+    });
   });
 }
 // PRODUCT DETAILS POPUP
