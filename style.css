@@ -139,4 +139,23 @@ cursor: pointer;
 .clickable-product-image {
 cursor: pointer;
 }
+/* WEBSITE SHARE BUTTON */
+#websiteShareButton {
+  position: fixed;
+  bottom: 22px;
+  right: 20px;
+  z-index: 9998;
+  background: #8b3d2e;
+  color: white;
+  border: none;
+  padding: 15px 22px;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.2);
+}
 
+#websiteShareButton:hover {
+  opacity: 0.9;
+}
