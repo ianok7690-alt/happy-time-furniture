@@ -163,6 +163,10 @@ function openProductDetails(id) {
          rel="noopener">
         ORDER ON WHATSAPP
       </a>
+
+      <button class="button primary" id="shareProductButton">
+        ↗ SHARE PRODUCT
+      </button>
     </div>
   `;
 
@@ -172,8 +176,34 @@ function openProductDetails(id) {
     .addEventListener("click", () => {
       popup.style.display = "none";
     });
-}
 
+  document.getElementById("shareProductButton")
+    .addEventListener("click", async () => {
+
+      const shareText =
+        "Check out this furniture at Happy Time Furniture!\n\n" +
+        "Product: " + product.name + "\n" +
+        "Price: " + money(product.price) + "\n" +
+        "Picture: " + product.image_url + "\n\n" +
+        "Visit our website: " + window.location.href;
+
+      try {
+        if (navigator.share) {
+          await navigator.share({
+            title: product.name,
+            text: shareText
+          });
+        } else {
+          await navigator.clipboard.writeText(shareText);
+          alert("Product details copied! You can now share them.");
+        }
+      } catch (error) {
+        if (error.name !== "AbortError") {
+          prompt("Copy these product details:", shareText);
+        }
+      }
+    });
+}
 
 // CUSTOMER ENQUIRIES
 function addToCart(id) {
