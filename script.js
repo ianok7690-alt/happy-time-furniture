@@ -604,7 +604,39 @@ const year = document.getElementById("year");
 if (year) {
   year.textContent = new Date().getFullYear();
 }
+// SHARE WEBSITE
+const shareButton = document.createElement("button");
 
+shareButton.id = "websiteShareButton";
+shareButton.textContent = "↗ SHARE WEBSITE";
+shareButton.type = "button";
+
+document.body.appendChild(shareButton);
+
+shareButton.addEventListener("click", async () => {
+  const shareData = {
+    title: "Happy Time Furniture",
+    text: "Visit Happy Time Furniture for quality and affordable furniture in Mathare, Nairobi!",
+    url: "https://ianok7690-alt.github.io/happy-time-furniture/"
+  };
+
+  if (navigator.share) {
+    try {
+      await navigator.share(shareData);
+    } catch (error) {
+      if (error.name !== "AbortError") {
+        console.error(error);
+      }
+    }
+  } else {
+    try {
+      await navigator.clipboard.writeText(shareData.url);
+      alert("Website link copied! You can now share it with friends.");
+    } catch (error) {
+      prompt("Copy and share this website link:", shareData.url);
+    }
+  }
+});
 // START WEBSITE
 async function startWebsite() {
   await checkAdminSession();
